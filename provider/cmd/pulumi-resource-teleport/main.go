@@ -20,7 +20,7 @@ import (
 	"context"
 	_ "embed"
 	"github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
-	teleport "github.com/lbrlabs/pulumi-teleport/provider"
+	teleport "github.com/gunzy83/pulumi-teleport/provider"
 )
 
 //go:embed schema-embed.json

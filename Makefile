@@ -1,7 +1,7 @@
 PACK             := teleport
-ORG              := lbrlabs
+ORG              := gunzy83
 PROJECT          := github.com/${ORG}/pulumi-${PACK}
-NODE_MODULE_NAME := @lbrlabs/${PACK}
+NODE_MODULE_NAME := @gunzy83/${PACK}
 TF_NAME          := ${PACK}
 PROVIDER_PATH    := provider
 VERSION_PATH     := ${PROVIDER_PATH}/pkg/version.Version

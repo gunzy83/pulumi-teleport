@@ -1,4 +1,4 @@
-module github.com/lbrlabs/pulumi-teleport/sdk
+module github.com/gunzy83/pulumi-teleport/sdk
 
 go 1.20
 

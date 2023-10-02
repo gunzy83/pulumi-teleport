@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"unicode"
 
-	"github.com/lbrlabs/pulumi-teleport/provider/pkg/version"
+	"github.com/gunzy83/pulumi-teleport/provider/pkg/version"
 	tfpfbridge "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
@@ -59,11 +59,11 @@ func Provider() tfpfbridge.ProviderInfo {
 	info := tfbridge.ProviderInfo{
 		Name:              "teleport",
 		DisplayName:       "Teleport",
-		Publisher:         "lbrlabs",
-		LogoURL:           "https://raw.githubusercontent.com/lbrlabs/pulumi-teleport/main/assets/teleport.png", // nolint[:lll]
-		PluginDownloadURL: "github://api.github.com/lbrlabs",
+		Publisher:         "gunzy83",
+		LogoURL:           "https://raw.githubusercontent.com/gunzy83/pulumi-teleport/main/assets/teleport.png", // nolint[:lll]
+		PluginDownloadURL: "github://api.github.com/gunzy83",
 		Description:       "A Pulumi package to create Teleport resources in Pulumi programs.",
-		Keywords:          []string{"pulumi", "teleport", "lbrlabs"},
+		Keywords:          []string{"pulumi", "teleport", "gunzy83"},
 		License:           "Apache-2.0",
 		Homepage:          "https://pulumi.io",
 		Repository:        "https://github.com/pulumi/pulumi-tls",
@@ -72,7 +72,7 @@ func Provider() tfpfbridge.ProviderInfo {
 		Resources:         map[string]*tfbridge.ResourceInfo{},
 		DataSources:       map[string]*tfbridge.DataSourceInfo{},
 		JavaScript: &tfbridge.JavaScriptInfo{
-			PackageName: "@lbrlabs/pulumi-teleport",
+			PackageName: "@gunzy83/pulumi-teleport",
 			// List any npm dependencies and their versions
 			Dependencies: map[string]string{
 				"@pulumi/pulumi": "^3.0.0",
@@ -88,14 +88,14 @@ func Provider() tfpfbridge.ProviderInfo {
 		},
 		Python: &tfbridge.PythonInfo{
 			// List any Python dependencies and their version ranges
-			PackageName: "lbrlabs_pulumi_teleport",
+			PackageName: "gunzy83_pulumi_teleport",
 			Requires: map[string]string{
 				"pulumi": ">=3.0.0,<4.0.0",
 			},
 		},
 		Golang: &tfbridge.GolangInfo{
 			ImportBasePath: filepath.Join(
-				fmt.Sprintf("github.com/lbrlabs/pulumi-%[1]s/sdk/", teleportPkg),
+				fmt.Sprintf("github.com/gunzy83/pulumi-%[1]s/sdk/", teleportPkg),
 				tfbridge.GetModuleMajorVersion(version.Version),
 				"go",
 				teleportPkg,
@@ -103,7 +103,7 @@ func Provider() tfpfbridge.ProviderInfo {
 			GenerateResourceContainerTypes: true,
 		},
 		CSharp: &tfbridge.CSharpInfo{
-			RootNamespace: "Lbrlabs.PulumiPackage",
+			RootNamespace: "gunzy83.PulumiPackage",
 			PackageReferences: map[string]string{
 				"Pulumi": "3.*",
 			},
